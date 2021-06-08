@@ -10,7 +10,6 @@
 `curl -sf https://www.getlektor.com/installer.py | python3`
 [See Docs for more information][1]
 
-* run : `lektor server`
 
 * Finally run `lektor server`
 
