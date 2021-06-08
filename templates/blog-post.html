@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+{{ render_blog_post(this) }}
+
+
+<!-- this should render links to tags page-->
+{% if this.tags %}
+<ul>
+  {% for t in this.tags -%}
+  <li>
+    <a href="{{ ('/' ~ t.lower())|url }}">
+      All posts tagged {{ t }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+
+<!-- Disqus comments-->
+<div class="comments">{{ render_disqus_comments() }}</div>
+
+{% endblock %}

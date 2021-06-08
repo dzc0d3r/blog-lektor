@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet"
+  href="{{ '/static/style.css'|url }}">
+<title>{% block title %}Welcome{% endblock %} — Codeblog</title>
+
+<body>
+  <header>
+    <h1>Codeblog</h1>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li{% if
+          this._path=='/'
+          %}
+          class="active nav-item"
+          {%
+          endif
+          %}><a class="linky nav-link"
+            href="{{ '/'|url }}">Home</a></li>
+          {% for href, title in [
+          ['/posts', 'Posts'],
+          ['/projects', 'Projects'],
+          ['/about', 'About']
+          ] %}
+          <li{% if
+            this.is_child_of(href)
+            %}
+            class="active"
+            {%
+            endif
+            %}><a class="linky nav-link"
+              href="{{ href|url }}">{{ title }}</a></li>
+            {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <div class="page">
+    {% block body %}{% endblock %}
+  </div>
+  <footer>
+    &copy; Copyright 2021 by dzc0d3r .
+  </footer>
+</body>

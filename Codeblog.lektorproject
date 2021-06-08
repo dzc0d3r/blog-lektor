@@ -1,0 +1,7 @@
+[project]
+name = Codeblog
+
+[packages]
+lektor-minify = 1.2
+lektor-disqus-comments = 0.4.1
+lektor-tags = 0.3
