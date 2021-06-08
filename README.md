@@ -12,7 +12,9 @@
 
 * run : `lektor server`
 
-* [optional] : if you want to build a minified build : 
+* Finally run `lektor server`
+
+##### [optional] if you want to build a minified build : 
 clear the cache : `lektor clean --yes`
 build  : `lektor build -O dist -f minify`
 
