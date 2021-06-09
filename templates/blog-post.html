@@ -10,7 +10,7 @@
 <ul>
   {% for t in this.tags -%}
   <li>
-    <a href="{{ ('/' ~ t.lower())|url }}">
+    <a href="{{ ('/posts@tag/' ~ t.lower())|url }}">
       All posts tagged {{ t }}
     </a>
   </li>

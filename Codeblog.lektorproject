@@ -1,7 +1,8 @@
 [project]
 name = Codeblog
+url_style = absolute
 
 [packages]
 lektor-minify = 1.2
 lektor-disqus-comments = 0.4.1
-lektor-tags = 0.3
+lektor-tags = 0.2
